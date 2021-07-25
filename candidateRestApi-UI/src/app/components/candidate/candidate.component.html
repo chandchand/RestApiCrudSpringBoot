@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>Candidate Empoyee List</h2>
+  <p>List Data Of Candidate Employee</p>
+  <div>
+    <div class="card">
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Address</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Position</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let candidate of candidates ">
+              <td>{{ candidate.fullName }}</td>
+              <td>{{ candidate.address }}</td>
+              <td>{{ candidate.email }}</td>
+              <td>{{ candidate.phone }}</td>
+              <td>{{ candidate.position }}</td>
+              <td>
+                <!-- <button (click)="updateCandidate(candidate.id)" class="btn btn-info"> Update</button> -->
+                <button (click)="deleteCandidate(candidate.id)" class="btn btn-danger" style="margin-left: 10px">
+                  Delete</button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
